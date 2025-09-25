@@ -1,0 +1,46 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "FirstLevel.json",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "123.tsx": {
+            "scaleInDock": 0.0625,
+            "scaleInEditor": 0.5
+        },
+        "FirstLevel.json": {
+            "scale": 0.0625,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 1368,
+                "y": -9104
+            }
+        },
+        "FirstLevel.json#Tiles": {
+            "scaleInDock": 0.0625
+        }
+    },
+    "last.imagePath": "C:/Users/Sugar/Desktop/Хакатон/Assets/City Assets Pack - Basic",
+    "map.fixedSize": false,
+    "map.lastUsedFormat": "json",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "openFiles": [
+        "FirstLevel.json"
+    ],
+    "project": "FirstLevel.tiled-project",
+    "recentFiles": [
+        "FirstLevel.json",
+        "123.tsx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}
