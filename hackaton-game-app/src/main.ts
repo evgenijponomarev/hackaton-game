@@ -5,8 +5,8 @@ import { scenes } from './scenes';
 import './style.css';
 
 new Phaser.Game({
-  width: 600,
-  height: 600,
+  width: 1000,
+  height: 2000,
   title: 'Hackaton game',
   scene: scenes,
   url: import.meta.env.URL || '',

@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Track.json",
+    "activeFile": "track.json",
     "expandedProjectPaths": [
         "."
     ],
@@ -11,7 +11,7 @@
         "": {
             "scaleInDock": 1
         },
-        "Track.json": {
+        "track.json": {
             "scale": 0.0625,
             "selectedLayer": 6,
             "viewCenter": {
@@ -19,77 +19,77 @@
                 "y": -7984
             }
         },
-        "Track.json#4680689": {
+        "track.json#coin": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
-        "Track.json#Base": {
+        "track.json#Base": {
             "scaleInDock": 0.33
         },
-        "Track.json#Car": {
+        "track.json#Car": {
             "scaleInDock": 1
         },
-        "Track.json#Creditka": {
+        "track.json#Creditka": {
             "scaleInDock": 1
         },
-        "Track.json#Eat": {
+        "track.json#Eat": {
             "scaleInDock": 1
         },
-        "Track.json#Road": {
+        "track.json#Road": {
             "scaleInDock": 1
         },
-        "Track.json#building_01": {
+        "track.json#building_01": {
             "scaleInDock": 0.33
         },
-        "Track.json#building_02": {
+        "track.json#building_02": {
             "scaleInDock": 0.25
         },
-        "Track.json#building_04": {
+        "track.json#building_04": {
             "scaleInDock": 0.33
         },
-        "Track.json#building_05": {
+        "track.json#building_05": {
             "scaleInDock": 0.33
         },
-        "Track.json#building_06": {
+        "track.json#building_06": {
             "scaleInDock": 0.5
         },
-        "Track.json#building_09": {
+        "track.json#building_09": {
             "scaleInDock": 0.5
         },
-        "Track.json#sidewalk": {
+        "track.json#sidewalk": {
             "scaleInDock": 1
         },
-        "Track.json#trash": {
+        "track.json#trash": {
             "scaleInDock": 1
         },
-        "Track.json#Клумба": {
+        "track.json#Клумба": {
             "scaleInDock": 1
         },
-        "Track.json#Лавочка1": {
+        "track.json#Лавочка1": {
             "scaleInDock": 1
         },
-        "Track.json#Мусорка": {
+        "track.json#Мусорка": {
             "scaleInDock": 1
         },
-        "Track.json#Стольб": {
+        "track.json#Стольб": {
             "scaleInDock": 1
         },
-        "Track.json#лавочка": {
+        "track.json#лавочка": {
             "scaleInDock": 1
         },
-        "Track.json#мусор": {
+        "track.json#мусор": {
             "scaleInDock": 1
         }
     },
-    "last.imagePath": "C:/Users/Sugar/Desktop/Хакатон/Assets/City Assets Pack - Basic",
+    "last.imagePath": "C:/Users/Sugar/Desktop/Хакатон/assets/images",
     "map.fixedSize": false,
     "map.lastUsedFormat": "json",
     "openFiles": [
-        "Track.json"
+        "track.json"
     ],
-    "project": "Track.tiled-project",
+    "project": "track.tiled-project",
     "recentFiles": [
-        "Track.json"
+        "track.json"
     ],
     "tileset.embedInMap": true,
     "tileset.tileSize": {
