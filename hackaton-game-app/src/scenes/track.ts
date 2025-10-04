@@ -1,4 +1,4 @@
-import trackJSON from '../map/level/track.json';
+import trackJSON from '../map/track.json';
 import { TILEMAP_NAME } from '../constants';
 
 export class Track extends Phaser.Scene {
@@ -6,25 +6,21 @@ export class Track extends Phaser.Scene {
     super('TrackScene');
   }
 
-  loadIcons() {
-    trackJSON.tilesets.forEach((tileset) => {
-      this.load.image(tileset.name, tileset.image.replace('..', 'src/map'));
-    });
-  }
-
   preload() {
-    trackJSON.tilesets.forEach((tileset) => {
-      this.load.image(tileset.name, tileset.image.replace('..', 'src/map'));
+    trackJSON.tilesets[0].tiles.forEach((tile) => {
+      const imagePath = `src/map/${tile.image}`;
+      this.load.image(tile.image, imagePath);
     });
 
-    this.load.tilemapTiledJSON(TILEMAP_NAME, 'src/map/level/track.json');
+    this.load.tilemapTiledJSON(TILEMAP_NAME, 'src/map/track.json');
   }
 
   create() {
     const map = this.make.tilemap({ key: TILEMAP_NAME });
-    const tilesets = trackJSON.tilesets
+
+    const tilesets = map.tilesets
       .map((tileset) => {
-        return map.addTilesetImage(tileset.name);
+        return map.addTilesetImage(tileset.name, tileset.name);
       })
       .filter((t) => !!t);
 
