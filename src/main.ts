@@ -12,7 +12,7 @@ new Phaser.Game({
   scene: scenes,
   url: import.meta.env.URL || '',
   version: import.meta.env.VERSION || '',
-  backgroundColor: '#6c627b',
+  backgroundColor: '#2c3e50',
   physics: {
     default: 'arcade',
     arcade: {

@@ -12,15 +12,18 @@ export class Player extends Entity {
     const animsFrameRate = 9;
     this.textureKey = texture;
 
-    anims.create({
-      key: 'up',
-      frames: anims.generateFrameNames(this.textureKey, {
-        start: 0,
-        end: 5,
-      }),
-      frameRate: animsFrameRate,
-      repeat: -1,
-    });
+    // Проверяем, существует ли анимация, и создаем только если её нет
+    if (!anims.exists('up')) {
+      anims.create({
+        key: 'up',
+        frames: anims.generateFrameNames(this.textureKey, {
+          start: 0,
+          end: 5,
+        }),
+        frameRate: animsFrameRate,
+        repeat: -1,
+      });
+    }
   }
 
   stopRun() {

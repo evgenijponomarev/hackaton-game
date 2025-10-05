@@ -12,9 +12,31 @@ export class Track extends Phaser.Scene {
   layers?: Phaser.Tilemaps.TilemapLayer[];
   buttonLeft?: Phaser.GameObjects.Rectangle;
   buttonRight?: Phaser.GameObjects.Rectangle;
+  isPaused = false;
 
   constructor() {
     super('TrackScene');
+  }
+
+  init() {
+    // Сбрасываем состояние при инициализации сцены
+    this.isPaused = false;
+    this.score = 0;
+
+    // Очищаем все элементы паузы если они есть
+    this.children.list.forEach((child) => {
+      if (
+        child instanceof Phaser.GameObjects.Text &&
+        child.getData('isPauseText')
+      ) {
+        child.destroy();
+      }
+    });
+
+    // Очищаем анимации чтобы избежать конфликтов при перезапуске
+    if (this.anims.exists('up')) {
+      this.anims.remove('up');
+    }
   }
 
   loadAssets() {
@@ -44,6 +66,28 @@ export class Track extends Phaser.Scene {
       padding: { x: 0, y: 10 },
     });
     this.scoreText.setScrollFactor(0);
+
+    // Добавляем кнопку возврата в меню
+    const menuButton = this.add.text(20, 20, 'MENU', {
+      fontSize: '20px',
+      color: '#ffffff',
+      backgroundColor: '#34495e',
+      padding: { x: 10, y: 5 },
+    });
+    menuButton.setScrollFactor(0);
+    menuButton.setInteractive({ useHandCursor: true });
+
+    menuButton.on('pointerover', () => {
+      menuButton.setBackgroundColor('#2c3e50');
+    });
+
+    menuButton.on('pointerout', () => {
+      menuButton.setBackgroundColor('#34495e');
+    });
+
+    menuButton.on('pointerdown', () => {
+      this.scene.start('MenuScene');
+    });
   }
 
   addButton(type: 'left' | 'right') {
@@ -202,9 +246,45 @@ export class Track extends Phaser.Scene {
     this.initCoinsLayer();
     this.buttonLeft = this.addButton('left');
     this.buttonRight = this.addButton('right');
+
+    // Добавляем обработчик клавиши Escape для паузы
+    this.input.keyboard?.on('keydown-ESC', () => {
+      this.togglePause();
+    });
+  }
+
+  togglePause() {
+    this.isPaused = !this.isPaused;
+
+    if (this.isPaused) {
+      this.physics.pause();
+      this.add
+        .text(this.cameras.main.centerX, this.cameras.main.centerY, 'PAUSED', {
+          fontSize: '48px',
+          color: '#ffffff',
+          backgroundColor: '#000000',
+          padding: { x: 20, y: 10 },
+        })
+        .setOrigin(0.5)
+        .setScrollFactor(0)
+        .setData('isPauseText', true); // Помечаем текст паузы
+    } else {
+      this.physics.resume();
+      // Удаляем текст паузы
+      this.children.list.forEach((child) => {
+        if (
+          child instanceof Phaser.GameObjects.Text &&
+          child.getData('isPauseText')
+        ) {
+          child.destroy();
+        }
+      });
+    }
   }
 
   update(_: number, delta: number): void {
-    this.player?.update(delta);
+    if (!this.isPaused) {
+      this.player?.update(delta);
+    }
   }
 }
