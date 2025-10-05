@@ -214,6 +214,22 @@ export class Track extends Phaser.Scene {
     roadsideObjectsLayer.setCollisionByExclusion([-1]);
   }
 
+  initRoadsideLayer() {
+    if (!this.layers || !this.player) return;
+
+    const roadsideLayer = this.layers.find(
+      (layer) => layer.layer.name === 'roadside'
+    );
+
+    if (roadsideLayer) {
+      this.physics.add.collider(this.player, roadsideLayer);
+      roadsideLayer.setCollisionByExclusion([-1]);
+      console.log('Roadside layer collision initialized');
+    } else {
+      console.warn('Roadside layer not found');
+    }
+  }
+
   initCoinsLayer() {
     if (!this.layers || !this.player) return;
 
@@ -242,6 +258,7 @@ export class Track extends Phaser.Scene {
     this.addScoreText();
     this.initCamera();
     this.initWorldPhisics();
+    this.initRoadsideLayer();
     this.initRoadsideObjectsLayer();
     this.initCoinsLayer();
     this.buttonLeft = this.addButton('left');
