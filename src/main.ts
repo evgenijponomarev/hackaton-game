@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-import trackJSON from './map/track.json';
+import trackJSON from '../public/map/track.json';
 import { scenes } from './scenes';
 
 import './style.css';
