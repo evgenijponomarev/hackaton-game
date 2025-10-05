@@ -18,9 +18,9 @@ export class Track extends Phaser.Scene {
       });
     });
 
-    this.load.tilemapTiledJSON(TILEMAP_NAME, '/public/map/track.json');
+    this.load.tilemapTiledJSON(TILEMAP_NAME, '/map/track.json');
 
-    this.load.spritesheet(SPRITE.PLAYER, '/public/assets/images/player.png', {
+    this.load.spritesheet(SPRITE.PLAYER, '/assets/images/player.png', {
       frameWidth: SIZE.PLAYER.WIDTH,
       frameHeight: SIZE.PLAYER.HEIGHT,
     });
