@@ -1,6 +1,6 @@
-import '../map/track.json?url';
+import trackJsonSrc from '../map/track.json?url';
 
-import trackJSON from '../map/track.json';
+import trackJson from '../map/track.json';
 import { SIZE, SPRITE, TILEMAP_NAME } from '../constants';
 import { Player } from '../entities/player';
 
@@ -18,7 +18,7 @@ export class Track extends Phaser.Scene {
   }
 
   loadAssets() {
-    trackJSON.tilesets.forEach((tileset) => {
+    trackJson.tilesets.forEach((tileset) => {
       tileset.tiles.forEach((tile) => {
         this.load.image(tile.image, tile.image.replace('../../public/', '/'));
       });
@@ -29,7 +29,7 @@ export class Track extends Phaser.Scene {
       frameHeight: SIZE.PLAYER.HEIGHT,
     });
 
-    this.load.tilemapTiledJSON(TILEMAP_NAME, 'src/map/track.json');
+    this.load.tilemapTiledJSON(TILEMAP_NAME, trackJsonSrc);
   }
 
   addScoreText() {
@@ -111,7 +111,7 @@ export class Track extends Phaser.Scene {
       })
       .filter((t) => !!t);
 
-    this.layers = trackJSON.layers
+    this.layers = trackJson.layers
       .map((layer) => {
         return this.map!.createLayer(layer.name, tilesets);
       })
