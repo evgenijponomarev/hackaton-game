@@ -1,4 +1,4 @@
-import trackJSON from '../../public/map/track.json';
+import trackJSON from '../map/track.json';
 import { SIZE, SPRITE, TILEMAP_NAME } from '../constants';
 import { Player } from '../entities/player';
 
@@ -14,11 +14,11 @@ export class Track extends Phaser.Scene {
   preload() {
     trackJSON.tilesets.forEach((tileset) => {
       tileset.tiles.forEach((tile) => {
-        this.load.image(tile.image, tile.image);
+        this.load.image(tile.image, tile.image.replace('../../public/', '/'));
       });
     });
 
-    this.load.tilemapTiledJSON(TILEMAP_NAME, '/map/track.json');
+    this.load.tilemapTiledJSON(TILEMAP_NAME, 'src/map/track.json?');
 
     this.load.spritesheet(SPRITE.PLAYER, '/assets/images/player.png', {
       frameWidth: SIZE.PLAYER.WIDTH,

@@ -2079,85 +2079,85 @@
          "tiles": [
             {
                "id": 0,
-               "image": "..\/assets\/images\/boxes.png",
+               "image": "..\/..\/public\/assets\/images\/boxes.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 1,
-               "image": "..\/assets\/images\/roadside_dubleline.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_dubleline.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 2,
-               "image": "..\/assets\/images\/roadside_house1.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_house1.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 3,
-               "image": "..\/assets\/images\/roadside_house2.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_house2.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 4,
-               "image": "..\/assets\/images\/roadside_house3.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_house3.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 5,
-               "image": "..\/assets\/images\/roadside_house4.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_house4.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 6,
-               "image": "..\/assets\/images\/roadside_house5.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_house5.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 7,
-               "image": "..\/assets\/images\/roadside_house6.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_house6.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 8,
-               "image": "..\/assets\/images\/roadside_line_left.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_line_left.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 9,
-               "image": "..\/assets\/images\/roadside_right.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_right.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 10,
-               "image": "..\/assets\/images\/tree.png",
+               "image": "..\/..\/public\/assets\/images\/tree.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 11,
-               "image": "..\/assets\/images\/ground.png",
+               "image": "..\/..\/public\/assets\/images\/ground.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 12,
-               "image": "..\/assets\/images\/roadside_line_right.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_line_right.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 13,
-               "image": "..\/assets\/images\/roadside_left.png",
+               "image": "..\/..\/public\/assets\/images\/roadside_left.png",
                "imageheight": 128,
                "imagewidth": 128
             }
@@ -2180,25 +2180,25 @@
          "tiles": [
             {
                "id": 0,
-               "image": "..\/assets\/icons\/bank_card.png",
+               "image": "..\/..\/public\/assets\/icons\/bank_card.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 1,
-               "image": "..\/assets\/icons\/car.png",
+               "image": "..\/..\/public\/assets\/icons\/car.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 2,
-               "image": "..\/assets\/icons\/coin.png",
+               "image": "..\/..\/public\/assets\/icons\/coin.png",
                "imageheight": 128,
                "imagewidth": 128
             },
             {
                "id": 3,
-               "image": "..\/assets\/icons\/eat.png",
+               "image": "..\/..\/public\/assets\/icons\/eat.png",
                "imageheight": 128,
                "imagewidth": 128
             }

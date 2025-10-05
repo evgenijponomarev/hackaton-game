@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 
-import trackJSON from '../public/map/track.json';
+import trackJSON from './map/track.json';
 import { scenes } from './scenes';
 
 import './style.css';
@@ -24,4 +24,8 @@ new Phaser.Game({
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
   pixelArt: true,
+  fps: {
+    target: 60,
+    forceSetTimeOut: true,
+  },
 });
