@@ -1,3 +1,5 @@
+import '../map/track.json?url';
+
 import trackJSON from '../map/track.json';
 import { SIZE, SPRITE, TILEMAP_NAME } from '../constants';
 import { Player } from '../entities/player';
@@ -27,7 +29,7 @@ export class Track extends Phaser.Scene {
       frameHeight: SIZE.PLAYER.HEIGHT,
     });
 
-    this.load.tilemapTiledJSON(TILEMAP_NAME, 'src/map/track.json?');
+    this.load.tilemapTiledJSON(TILEMAP_NAME, 'src/map/track.json');
   }
 
   addScoreText() {
@@ -50,12 +52,11 @@ export class Track extends Phaser.Scene {
     const button = this.add.rectangle(
       type === 'left' ? 0 : this.sys.game.canvas.width,
       this.sys.game.canvas.height,
-      400,
-      400,
+      this.sys.game.canvas.width,
+      this.sys.game.canvas.height,
       0xffffff,
-      0.5
+      0
     );
-    button.setRounded(100);
     button.setScrollFactor(0);
 
     // Делаем кнопку интерактивной
